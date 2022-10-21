@@ -1,0 +1,25 @@
+#Data
+import pandas as pd
+data=pd.read_excel("FILE NAME")
+x=data.iloc[:,:-1].values
+y=data.iloc[:,1].values
+print("Data reseved......................")
+#moudels
+from sklearn.linear_model import linearRegresion
+model=LineareRegression()
+model.fit(x,y)
+print("Moudels set........................")
+#test
+ypred=model.predict(X)  #R2
+
+from sklearn.merics improt r2_score
+print("r2=",r2_score(y,ypred))
+#Charts
+import matplotlib.pyplot as plt
+plt.scattrer(x,y,lable="data")
+plt.plot(y,ypred,lable="fit")
+plt.xlable("x")
+plt.ylable("y")
+plt.legend()
+plt.show
+
